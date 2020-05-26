@@ -9,17 +9,22 @@ import os
 import random
 import re
 import sys
+import string
+
+
 def solve(s):
-    return s.title()
+    words = s.split(" ")
+    return ' '.join([word.capitalize() for word in words])
+
 
 if __name__ == '__main__':
-    fptr = open(os.environ['OUTPUT_PATH'], 'w')
+    # fptr = open(os.environ['OUTPUT_PATH'], 'w')
 
     s = input()
 
     result = solve(s)
 
-    fptr.write(result + '\n')
+    # fptr.write(result + '\n')
 
-    fptr.close()
+    # fptr.close()
     print(result)
